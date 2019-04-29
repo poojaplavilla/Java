@@ -1,0 +1,9 @@
+package helloworld; // package name should be in lowercase...
+
+public class HelloWorld { //class name should be in CamelCase...
+	public static void main(String[] args) { 
+		
+		System.out.println("Hello world..."); // prints whatever is there in the quotes...
+	}
+
+}
