@@ -1,0 +1,19 @@
+package bytestreamwrite;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class TestByteWrite {
+
+	public static void main(String[] args) throws IOException {
+		FileOutputStream fos = new FileOutputStream("C:\\Users\\Prithvi\\Documents\\test2.txt");
+		String data = "Hello everyone..!!!";
+		fos.write(data.getBytes());
+		
+		fos.close();
+		
+		
+		
+
+	}
+
+}
