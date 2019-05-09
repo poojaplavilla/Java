@@ -23,6 +23,9 @@ public class TestDatabaseOpr {
 			dop.create();
 			break;
 		case 2:
+			String ans;
+			
+			do {
 			System.out.println("Enter id: ");
 			dop.setId(scan.nextInt());
 			scan.nextLine();
@@ -30,9 +33,14 @@ public class TestDatabaseOpr {
 			dop.setEmpName(scan.next());
 			System.out.println("Enter Salary: ");
 			dop.setSalary(scan.nextInt());
+			dop.insert();
+			System.out.println("Do you want to insert other values: (y/n) ");
+			scan.nextLine();
+			ans = scan.nextLine();
+			}while(ans.equals("y"));			
 			
 			System.out.println("Inserting values...");
-			dop.insert();
+			
 			break;
 		case 3:
 			System.out.println("Enter id: ");
