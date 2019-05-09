@@ -34,6 +34,7 @@ public class TestDatabaseOpr {
 		case 5:
 			System.out.println("Showing your table...");
 			dop.show();
+			break;
 		default:
 			System.out.println("Invalid option");
 			break;	
