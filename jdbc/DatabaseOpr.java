@@ -28,15 +28,15 @@ public class DatabaseOpr {
 	}
 
 	public void update() throws Exception {
-		String q = "update Employee set Empname='xyz' where id=1;";
+		String qu = "update Employee set Empname='xyz' where id=1;";
 		st = con.createStatement();
-		st.executeUpdate(q);
+		st.executeUpdate(qu);
 	}
 
 	public void delete() throws Exception {
-		String query = "delete from Employee where id = 1";
+		String qu = "delete from Employee where id = 1";
 		st = con.createStatement();
-		st.executeUpdate(query);
+		st.executeUpdate(qu);
 	}
 
 	public void show() throws Exception {
