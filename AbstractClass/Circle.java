@@ -5,7 +5,7 @@ public class Circle extends Shape {
 	
 	public void Cal()
 	{
-		area = 3.114f * radius * radius;
+		area = 3.14f * radius * radius;
 	}
 	public void print() {
 		System.out.println("Radius is " + radius);
