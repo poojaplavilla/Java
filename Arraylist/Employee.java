@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class Employee {
 
-	int id;
-	String name;
-	int salary;
+	private int id;
+	private String name;
+	private int salary;
 	private ArrayList<Certificates> certificates; //need to create a class of whatever written in <>...
 	public Employee() {
 		super();
