@@ -8,8 +8,8 @@ public class DatabaseOpr {
 	Statement st;
 	PreparedStatement ps;
 	
-	int id,salary;
-	String empName;
+	private int id,salary;
+	private String empName;
 	
 	public DatabaseOpr() throws Exception {
 
@@ -47,15 +47,15 @@ public class DatabaseOpr {
 	
 
 	public void create() throws Exception {
-		String qu = "create table Employee (id integer primary key,EmpName varchar(100) not null,Salary integer not null);";
+		String query = "create table Employee (id integer primary key,EmpName varchar(100) not null,Salary integer not null);";
 		st = con.createStatement();
-		st.executeUpdate(qu);
+		st.executeUpdate(query);
 	}
 
 	public void insert() throws Exception {
 		
 		String query = "insert into Employee values(?,?,?)";
-		PreparedStatement ps = con.prepareStatement(query);
+		ps = con.prepareStatement(query);
 		ps.setInt(1, id);
 		ps.setString(2, empName);
 		ps.setInt(3, salary);
@@ -64,7 +64,7 @@ public class DatabaseOpr {
 
 	public void update() throws Exception {
 		String query = "update Employee set Empname=? where id=?;";
-		PreparedStatement ps = con.prepareStatement(query);
+		ps = con.prepareStatement(query);
 		ps.setInt(1, id);
 		ps.setString(2, empName);
 		ps.executeUpdate();
@@ -72,7 +72,7 @@ public class DatabaseOpr {
 
 	public void delete() throws Exception {
 		String query = "delete from Employee where id =?;";
-		PreparedStatement ps = con.prepareStatement(query);
+		ps = con.prepareStatement(query);
 		ps.setInt(1, id);
 		ps.executeUpdate();
 	}
