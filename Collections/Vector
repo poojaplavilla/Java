@@ -1,0 +1,26 @@
+
+
+import java.util.* ;
+public class TestList {
+public static void main (String[]args) {
+Vector<String> v = new Vector<String>();
+System.out.println("Adding values");
+
+v.addElement("a");
+v.addElement("b");
+v.addElement("c");
+v.addElement("d");
+v.addElement("e");
+
+System.out.println("Printing Vector values : "+v);
+
+System.out.println("Inserting 'j' at index 2");
+v.add(2,"j");
+System.out.println("Removing Vector value at '3' : "+v.remove(3));
+
+System.out.println("Printing Vector values :"+v);
+}
+}
+
+
+
