@@ -1,7 +1,7 @@
 
 
 import java.util.*;
-public class TestList {
+public class TestSets {
 public static void main (String[] args){
 HashSet<Integer> hs = new HashSet<Integer>();
 hs.add(1);
