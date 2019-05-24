@@ -87,7 +87,7 @@ public class Mob {
 
 	public void update() throws Exception {
 		String query = "update ContactBook set fname=? where id=?;";
-		PreparedStatement ps = con.prepareStatement(query);
+		ps = con.prepareStatement(query);
 		ps.setInt(1, id);
 		ps.setString(2, fname);
 		ps.executeUpdate();
@@ -95,7 +95,7 @@ public class Mob {
 
 	public void delete() throws Exception {
 		String query = "delete from ContactBook where id =?;";
-		PreparedStatement ps = con.prepareStatement(query);
+		ps = con.prepareStatement(query);
 		ps.setInt(1, id);
 		ps.executeUpdate();
 	}
