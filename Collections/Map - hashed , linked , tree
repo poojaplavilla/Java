@@ -1,0 +1,38 @@
+
+
+import java.util.*;
+public class TestList {
+public static void main(String[] args) {
+HashMap<Integer,String> hm = new HashMap<Integer,String>();
+hm.put(1,"Tom");
+hm.put(3,"John");
+hm.put(4,"Jerry");
+hm.put(8,"Sam");
+hm.put(9,"Nick");
+hm.put(10,"Kenan");
+hm.put(14,"Kel");
+System.out.println("Printing the HashMap :" + hm);
+
+
+LinkedHashMap<Integer,String> lhm = new LinkedHashMap<Integer,String> ();
+lhm.put(1,"Tom");
+lhm.put(3,"John");
+lhm.put(4,"Jerry");
+lhm.put(8,"Sam");
+lhm.put(9,"Nick");
+lhm.put(10,"Kenan");
+lhm.put(14,"Kel");
+System.out.println("Printing the LinkedHashMap :" + lhm);
+
+
+TreeMap<Integer,String> tm = new TreeMap<Integer,String>(); 
+tm.put(1,"Tom");
+tm.put(3,"John");
+tm.put(4,"Jerry");
+tm.put(8,"Sam");
+tm.put(9,"Nick");
+tm.put(10,"Kenan");
+tm.put(14,"Kel");
+System.out.println("Printing the TreeMap :" + tm);
+}
+}
