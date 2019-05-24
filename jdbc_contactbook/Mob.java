@@ -3,9 +3,9 @@ package contactBook;
 import java.sql.*;
 
 public class Mob {
-	int id;
-	String fname, lname, email;
-	int mob1, mob2;
+	private int id;
+	private String fname, lname, email;
+	private double mob1, mob2;
 
 	Connection con;
 	Statement st;
@@ -54,7 +54,7 @@ public class Mob {
 		return mob1;
 	}
 
-	public void setMob1(int mob1) {
+	public void setMob1(double mob1) {
 		this.mob1 = mob1;
 	}
 
@@ -62,27 +62,26 @@ public class Mob {
 		return mob2;
 	}
 
-	public void setMob2(int mob2) {
+	public void setMob2(double mob2) {
 		this.mob2 = mob2;
 	}
 
 	public void create() throws Exception {
-		String qu = "create table ContactBook (id integer primary key,fname varchar(100) not null,lname varchar(100) not null,mob1 varchar(13) not null unique,mob2 varchar(13), email varchar(100) not null unique);";
+		String query = "create table ContactBook (id integer primary key,fname varchar(100) not null,lname varchar(100) not null,mob1 varchar(13) not null unique,mob2 varchar(13), email varchar(100) not null unique);";
 		st = con.createStatement();
-		st.executeUpdate(qu);
+		st.executeUpdate(query);
 	}
 
 	public void insert() throws Exception {
 
 		String query = "insert into ContactBook values(?,?,?,?,?,?)";
-		PreparedStatement ps = con.prepareStatement(query);
+		ps = con.prepareStatement(query);
 		ps.setInt(1, id);
 		ps.setString(2, fname);
 		ps.setString(3, lname);
 		ps.setDouble(4, mob1);
 		ps.setDouble(5, mob2);
 		ps.setString(6, email);
-
 		ps.executeUpdate();
 	}
 
@@ -106,7 +105,7 @@ public class Mob {
 		ResultSet rs = st.executeQuery("select * from ContactBook;");
 
 		while (rs.next()) {
-			System.out.println(rs.getInt(1) + "," + rs.getString(2) + "," + rs.getString(3) + "," + rs.getInt(4) + "," + rs.getInt(5) + ","  + rs.getString(6));
+			System.out.println(rs.getInt(1) + "," + rs.getString(2) + "," + rs.getString(3) + "," + rs.getDouble(4) + "," + rs.getDouble(5) + ","  + rs.getString(6));
 
 		}
 	}
